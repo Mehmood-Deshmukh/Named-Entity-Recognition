@@ -5,9 +5,14 @@ from transformers import pipeline, AutoModelForTokenClassification, BertTokenize
 labels = ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC', 'B-MISC', 'I-MISC']
 
 
+@st.cache_resource(show_spinner=False)
+def load_model_and_tokenizer(model_name):
+    model = AutoModelForTokenClassification.from_pretrained(model_name)
+    tokenizer = BertTokenizerFast.from_pretrained(model_name)
+    return model, tokenizer
+
 model_name = "Mehmood-Deshmukh/test-ner"
-model = AutoModelForTokenClassification.from_pretrained(model_name)
-tokenizer = BertTokenizerFast.from_pretrained(model_name)
+model, tokenizer = load_model_and_tokenizer(model_name)
 
 
 id_to_label = {i: label for i, label in enumerate(labels)}
