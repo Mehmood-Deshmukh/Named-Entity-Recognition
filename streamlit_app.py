@@ -11,7 +11,7 @@ def load_model_and_tokenizer(model_name):
     tokenizer = BertTokenizerFast.from_pretrained(model_name)
     return model, tokenizer
 
-model_name = "Mehmood-Deshmukh/test-ner"
+model_name = "Mehmood-Deshmukh/BERT-Finetuned-NER"
 model, tokenizer = load_model_and_tokenizer(model_name)
 
 
