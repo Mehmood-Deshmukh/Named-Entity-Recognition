@@ -4,7 +4,7 @@ This repository hosts a Named Entity Recognition (NER) application powered by a 
 
 ## Live Demo
 
-Explore the NER application live at: [NER BERT Fine-Tuned App](#)
+Explore the NER application live at: [NER BERT Fine-Tuned App](https://named-entity-recognition-bert-finetuned.streamlit.app/)
 
 ## Overview
 * This repository includes a complete pipeline for fine-tuning a BERT model for NER tasks.
